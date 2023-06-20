@@ -82,7 +82,7 @@ button.place(x=300,y=150)
 frame1= Frame(root,bd=3,width=700,height=280,bg="gray")
 frame1.pack(pady=(160,0))
 
-listbox= Listbox(frame1,font="arial 12",width=40,height=16,bg="pink",fg="white",cursor="hand2",selectbackground="light blue")
+listbox= Listbox(frame1,font="arial 12",width=40,height=16,bg="pink",fg="black",cursor="hand2",selectbackground="light blue")
 listbox.pack(side=LEFT , fill=BOTH, padx=2)
 scrollbar= Scrollbar(frame1)
 scrollbar.pack(side= RIGHT , fill= BOTH)
