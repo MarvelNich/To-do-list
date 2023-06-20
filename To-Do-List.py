@@ -13,7 +13,7 @@ def addTask():
     task_entry.delete(0, END)
 
     if task:
-        with open("C:\\Python Project\\tasklist.txt",'a') as taskfile:
+        with open("tasklist.txt",'a') as taskfile:
             taskfile.write(f"\n{task}")
         task_list.append(task)
         listbox.insert( END, task)
@@ -24,7 +24,7 @@ def deleteTask():
     task =str(listbox.get(ANCHOR))
     if task in task_list:
         task_list.remove(task)
-        with open("C:\\Python Project\\tasklist.txt",'w') as taskfie:
+        with open("tasklist.txt",'w') as taskfie:
             for task in task_list:
                 taskfie.write(task+"\n")
 
@@ -37,7 +37,7 @@ def openTaskfile():
         try:
             global task_list
         
-            with open("C:\\Python Project\\tasklist.txt","r") as taskfile:
+            with open("tasklist.txt","r") as taskfile:
               task = taskfile.readlines()
         
             for task in task:
@@ -45,7 +45,7 @@ def openTaskfile():
                    task_list.append(task)
                    listbox.insert(END ,task)
         except:
-            file=open('C:\\Python Project\\tasklist.txt','w')
+            file=open('tasklist.txt','w')
             file.close()
 
 #icon
